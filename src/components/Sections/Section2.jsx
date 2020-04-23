@@ -13,6 +13,9 @@ import {
 export default function Section2() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+  const sendEmail = () => {
+    console.log("Enviando email");
+  };
   return (
     <>
       <div
@@ -38,7 +41,7 @@ export default function Section2() {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="First Name..."
+                  placeholder="Nombre y apellido..."
                   type="text"
                   onFocus={() => setFirstFocus(true)}
                   onBlur={() => setFirstFocus(false)}
@@ -54,7 +57,7 @@ export default function Section2() {
                 </InputGroupAddon>
                 <Input
                   placeholder="Email..."
-                  type="text"
+                  type="email"
                   onFocus={() => setLastFocus(true)}
                   onBlur={() => setLastFocus(false)}
                 ></Input>
@@ -63,7 +66,7 @@ export default function Section2() {
                 <Input
                   cols="80"
                   name="name"
-                  placeholder="Type a message..."
+                  placeholder="Escribe un mensaje..."
                   rows="4"
                   type="textarea"
                 ></Input>
@@ -73,11 +76,10 @@ export default function Section2() {
                   block
                   className="btn-round"
                   color="info"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
+                  onClick={(e) => sendEmail()}
                   size="lg"
                 >
-                  Send Message
+                  Enviar mensaje
                 </Button>
               </div>
             </Col>

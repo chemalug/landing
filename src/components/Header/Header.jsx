@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
+import img from "../../assets/img/bg4.jpg";
 
 export default function Header() {
   let pageHeader = React.createRef();
